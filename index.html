@@ -14,17 +14,27 @@
         <link rel="import" href="elements/elements.html">
     </head>
     <body unresolved class="layout vertical fullbleed">
-        <paper-header-panel mode="waterfall">
-            <paper-toolbar class="google-blue">
-                <paper-icon-button icon="menu" on-tap="menuAction"></paper-icon-button>
-                <div class="title">Rifki Alhuraibi</div>
-                <paper-icon-button icon="more-vert" on-tap="moreAction"></paper-icon-button>
-            </paper-toolbar>
-            <div class="content">
-                Some of the content
-                <br>
-                <br>
-            </div>
-        </paper-header-panel>
+        <paper-drawer-panel>
+            <paper-header-panel drawer fixed>
+                <paper-toolbar class="google-blue">
+                    <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                </paper-toolbar>
+                <div>
+                    some menu
+                </div>
+            </paper-header-panel>
+        
+            <paper-header-panel main mode="waterfall">
+                <paper-toolbar class="google-blue">
+                    <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                    <div class="title">Rifki Alhuraibi</div>
+                    <paper-icon-button icon="more-vert" on="moreAction"></paper-icon-button>
+                </paper-toolbar>
+                
+                <div>
+                    Some of the content
+                </div>
+            </paper-header-panel>
+        </paper-drawer-panel>
     </body>
 </html>
